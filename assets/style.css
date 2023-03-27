@@ -399,6 +399,7 @@
     margin-bottom: 5px;
     background-color: orange;
     border-radius: 10px;
+    font-weight: 700;
 }
 #overview-button:hover {
     background-color: rgb(248, 220, 169);
@@ -410,6 +411,7 @@
     margin-bottom: 5px;
     background-color: orange;
     border-radius: 10px;
+    font-weight: 700;
 }
 #card-sign-up:hover {
     background-color: rgb(248, 220, 169);
@@ -1391,8 +1393,7 @@ footer {
 @media (max-width: 650px) and (min-width: 600px) {
     nav {
         position: absolute;
-        font-size: 10px;
-        
+        font-size: 10px;        
     }
     .nav-bar i {
         padding-left: 5px;
@@ -2120,447 +2121,152 @@ footer {
     }
 }
 
+.about-content, .first-feature, .card-plan, .trainer-card, .review-card {
+    background-color: black;
+}
 
-/* DRILLS PROFESSIONAL*/
+/* Drill */
 .drill-professional {
-    width: 100%;
-    height: 1600px;
+    height: 2100px;
     background-color: rgb(0, 0, 0, 0.8);
-    padding-top: 50px;
 }
-.drill-box {
-    width: 1000px;
-    height: 800px;
-    margin: 0 auto;
-    display: flex;
-}
-.drill-box-title {
-    width: 300px;
-    height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 0 20px;
-    flex-wrap: flex;
-}
-.drill-box-title span {
-    color: rgb(246, 204, 125);
-    font-size: 100px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    font-family: 'Anton', sans-serif;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.drill-box-title .drill-plan {
-    font-size: 30px;
-}
-.specification {
-    width: 700px;
-    height: 100%;
-    color: whitesmoke;
-}
-.all-specification-drill {
-    display: flex;
-    justify-content: space-around;
-    height: 150px;
-}
-.specification-drill-title {
-    display: flex;
-    justify-content: center;
-    width: 400px;
-    height: 150px;
-}
-.specification-drill-title span {
-    font-size: 45px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: rgba(244, 162, 19, 0.973);
-}
-.specification-drill-about {
-    width: 300px;
-    display: flex;
-    align-items: center;
-}
-
-/* DRILLS PLUS */
 .drill-plus {
-    width: 100%;
-    height: 1100px;
+    height: 1500px;
     background-color: rgb(0, 0, 0, 0.8);
-    padding-top: 50px;
 }
-.drill-box {
-    width: 1000px;
-    height: 800px;
+.drill-lite {
+    height: 1150px;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+.all-prof-box {
+    width: 800px;
     margin: 0 auto;
-    display: flex;
 }
-.drill-box-title {
-    width: 300px;
-    height: 600px;
+.prof-box-title {
+    border-bottom: none;
+    height: 170px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 0 20px;
-    flex-wrap: flex;
+    justify-content: center;
+    align-items: center;
 }
-.drill-box-title span {
-    color: rgb(246, 204, 125);
-    font-size: 100px;
+#title {
+    color: orange;
     font-weight: 900;
-    letter-spacing: 2px;
-    font-family: 'Anton', sans-serif;
-    width: 100%;
-    flex-wrap: wrap;
+    font-size: 75px;
 }
-
-.drill-box-title .drill-plan {
+#sub-title {
+    color: orange;
+    font-weight: 800;
     font-size: 30px;
 }
-.specification {
-    width: 700px;
-    height: 100%;
-    color: whitesmoke;
-}
-.all-specification-drill {
+.prof-box-description {
     display: flex;
-    justify-content: space-around;
-    height: 150px;
+    border: 1px orange solid;
+    border-radius: 10px;
+    width: 800px;
+    height: 160px;
+    margin: 25px auto 5px auto;
+
 }
-.specification-drill-title {
+.prof-box-drill {
+    width: 400px;
     display: flex;
     justify-content: center;
-    width: 400px;
-    height: 150px;
 }
-.specification-drill-title span {
-    font-size: 45px;
+.prof-box-drill span {
+    color: rgb(246, 204, 125);
+    font-size: 35px;
     font-weight: 700;
-    letter-spacing: 1px;
-    color: rgba(244, 162, 19, 0.973);
+    padding-top: 5px;
 }
-.specification-drill-about {
-    width: 300px;
+.prof-box-lessons {
+    width: 400px;
+    height: auto;
+    color: white;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
+    font-size: 18px;
+    padding-top: 20px;
 }
-
-/* DRILLS LITE */
-.drill-lite {
-    width: 100%;
-    height: 900px;
-    background-color: rgb(0, 0, 0, 0.8);
-    padding-top: 50px;
-}
-.drill-box {
-    width: 1000px;
-    height: 800px;
-    margin: 0 auto;
-    display: flex;
-}
-.drill-box-title {
+ul {
     width: 300px;
-    height: 600px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    padding: 0 20px;
-    flex-wrap: flex;
-}
-.drill-box-title span {
-    color: rgb(246, 204, 125);
-    font-size: 100px;
-    font-weight: 900;
-    letter-spacing: 2px;
-    font-family: 'Anton', sans-serif;
-    width: 100%;
-    flex-wrap: wrap;
-}
-.drill-box-title .drill-plan {
-    font-size: 30px;
-}
-.specification {
-    width: 700px;
-    height: 100%;
-    color: whitesmoke;
-}
-.all-specification-drill {
-    display: flex;
-    justify-content: space-around;
-    height: 150px;
-}
-.specification-drill-title {
-    display: flex;
-    justify-content: left;
-    width: 400px;
-    height: 150px;
-}
-.specification-drill-title span {
-    font-size: 40px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    color: rgba(244, 162, 19, 0.973);
-}
-.specification-drill-about {
-    width: 300px;
-    display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items:flex-start;
 }
 
-/* MEDIA for DRILLS */
-
-/* LITE */
-@media (max-width: 1000px) and (min-width: 900px) {
-    .drill-box {
-        display: flex;
-        width: 900px;
-    }
-    .drill-box-title {
-        width: 250px;
-    }
-    .drill-box-title span {
-        font-size: 80px;
-    }
-    .specification {
-        width: 650px;
-    }
-}
-
-@media (max-width: 900px) and (min-width: 800px) {
-    .drill-box {
-        display: flex;
-        width: 800px;
-    }
-
-    .drill-box-title {
-        width: 200px;
-    }
-
-    .drill-box-title span {
-        font-size: 65px;
-    }
-
-    .specification {
-        width: 600px;
-    }
-
-    .specification-drill-title span {
-        font-size: 30px;
-    }
-}
-
+/* MEDIA FOR DRILLS  */
 @media (max-width: 800px) and (min-width: 700px) {
-    .drill-lite {
-        height: 1000px;
-    }
-    .drill-box {
-        display: flex;
-        flex-direction: column;
+    .all-prof-box {
         width: 700px;
-        justify-content: center;
-        align-items: center;
     }
-    .drill-box-title {
-        display: block;
-        align-items: center;
-        width: 265px;
+    .prof-box-description {
+        width: 700px;
     }
-    .drill-box-title span {
-        font-size: 55px;
-    }
-    .specification {
-        width: 550px;
-    }
-    .specification-drill-title span {
-        font-size: 30px;
+    .prof-box-drill, .prof-box-lessons {
+        width: 350px;
     }
 }
 
 @media (max-width: 700px) and (min-width: 600px) {
-    .drill-box {
-        display: flex;
-        flex-direction: column;
+    .all-prof-box {
         width: 600px;
-        justify-content: center;
-        align-items: center;
     }
-    .drill-box-title {
-        display: block;
-        align-items: center;
-        width: 270px;
+    .prof-box-description {
+        width: 600px;
     }
-    .drill-box-title span {
-        font-size: 55px;
-    }
-    .specification {
-        width: 550px;
-    }
-    .specification-drill-title span {
-        font-size: 30px;
-    }
-}
-
-@media (max-width: 600px) and (min-width: 500px) {
-    .drill-box {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .drill-box-title {
-        display: block;
-        align-items: center;
-        width: 270px;
-    }
-
-    .drill-box-title span {
-        font-size: 55px;
-    }
-
-    .specification {
-        width: 500px;
-    }
-
-    .specification-drill-title span {
-        font-size: 25px;
-        padding-left: 10px;
-    }
-    .specification-drill-about {
-        width: 290px;
-    }
-    .specification-drill-about span {
-        font-size: 14px;
-    }
-}
-@media (max-width: 600px) and (min-width: 500px) {
-    .drill-box {
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .drill-box-title {
-        display: block;
-        align-items: center;
-        width: 270px;
-    }
-
-    .drill-box-title span {
-        font-size: 55px;
-    }
-
-    .specification {
-        width: 500px;
-    }
-
-    .specification-drill-title span {
-        font-size: 25px;
-        padding-left: 10px;
-    }
-    .specification-drill-about {
-        width: 290px;
-    }
-    .specification-drill-about span {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 500px) and (min-width: 390px) {
-    .drill-box {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .drill-box-title {
-        display: block;
-        align-items: center;
-        width: 220px;
-    }
-
-    .drill-box-title span {
-        font-size: 40px;
-    }
-    .drill-box-title .drill-plan {
-        font-size: 25px;
-    }
-    .specification {
-        width: 390px;
-    }
-
-    .specification-drill-title span {
-        font-size: 20px;
-        padding-left: 10px;
-    }
-
-    .specification-drill-about {
-        width: 290px;
-        padding-right: 10px;
-    }
-
-    .specification-drill-about span {
-        font-size: 12px;
-    }
-}
-
-/* PLUS */
-@media (max-width: 800px) and (min-width: 700px) {
-    .drill-box-title {
-        width: 280px;
-    }
-    .drill-plus {
-        height: 1200px;
-    }
-}
-
-@media (max-width: 700px) and (min-width: 600px) {
-    .drill-plus {
-        height: 1200px;
-    }
-}
-@media (max-width: 700px) and (min-width: 600px) {
-    .drill-box-title {
-        width: 290px;
-    }
-}
-@media (max-width: 600px) and (min-width: 500px) {
-    .drill-plus {
-        height: 1200px;
-    }
-    .drill-box-title {
+    .prof-box-drill, .prof-box-lessons {
         width: 300px;
     }
 }
+
+@media (max-width: 600px) and (min-width: 500px) {
+    .all-prof-box {
+        width: 500px;
+    }
+    .prof-box-description {
+        width: 500px;
+    }
+    .prof-box-drill, .prof-box-lessons {
+        width: 250px;
+    }
+    #title {
+        font-size: 60px;
+    }
+    #sub-title {
+        font-size: 20px;
+    }
+    .prof-box-drill span {
+        font-size: 30px;
+    }
+    .prof-box-lessons {
+        font-size: 15px;
+    }
+}
+
 @media (max-width: 500px) and (min-width: 390px) {
-    .drill-plus {
-        height: 1200px;
+    .all-prof-box {
+        width: 390px;
     }
-    .drill-box-title {
-        width: 230px;
+    .prof-box-description {
+        width: 380px;
     }
-}
-@media (max-width: 800px) {
-    .drill-box-title {
-        margin-top: 20px;
+    .prof-box-drill, .prof-box-lessons {
+        width: 190px;
     }
-    .drill-professional {
-        height: 1700px;
+    #title {
+        font-size: 50px;
     }
-}
-@media (max-width: 900px) {
-    .drill-box-title .drill-plan {
-        font-size: 25px;
+    #sub-title {
+        font-size: 18px;
     }
-}
-
-
-.about-content, .first-feature, .card-plan, .trainer-card, .review-card {
-    background-color: black;
+    .prof-box-drill span {
+        font-size: 23px;
+    }
+    .prof-box-lessons {
+        font-size: 13px;
+    }
 }

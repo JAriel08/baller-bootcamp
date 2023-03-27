@@ -119,13 +119,13 @@
                     <div class="card-plan-title">
                         <span>LITE</span>
                     </div>
+                    <div class="card-plan-price">
+                        <span class="exact-price">PHP 2,000</span><span class="per-month"><sub>/mo</sub></span>
+                    </div>
                     <div class="card-plan-description">
                         <span>For students who want to have intensive training in basketball for 1 month and become a
                             better player. (Limited lessons
                             will be tackled)</span>
-                    </div>
-                    <div class="card-plan-price">
-                        <span class="exact-price">PHP 2,000</span><span class="per-month"><sub>/mo</sub></span>
                     </div>
                     <div class="card-plan-features">
                         <span>Drills included:</span>
@@ -150,13 +150,13 @@
                     <div class="card-plan-title">
                         <span>PLUS</span>
                     </div>
+                    <div class="card-plan-price">
+                        <span class="exact-price">PHP 3,000</span><span class="per-month"><sub>/mo</sub></span>
+                    </div>
                     <div class="card-plan-description">
                         <span>For students who want to have intensive training in basketball for 2 months and gain more
                             experience. (Limited lessons
                             will be tackled)</span>
-                    </div>
-                    <div class="card-plan-price">
-                        <span class="exact-price">PHP 3,000</span><span class="per-month"><sub>/mo</sub></span>
                     </div>
                     <div class="card-plan-features">
                         <span>Drills included:</span>
@@ -184,13 +184,13 @@
                     <div class="prof-card-plan-title">
                         <span>PROFESSIONAL</span>
                     </div>
+                    <div class="card-plan-price">
+                        <span class="exact-price">PHP 3,500</span><span class="per-month"><sub>/mo</sub></span>
+                    </div>
                     <div class="card-plan-description">
                         <span>For students who want to have intensive training in basketball for 3 months and become the
                             best of the best.
                             (All the drills will be tackled)</span>
-                    </div>
-                    <div class="card-plan-price">
-                        <span class="exact-price">PHP 3,500</span><span class="per-month"><sub>/mo</sub></span>
                     </div>
                     <div class="card-plan-features">
                         <span>Drills included:</span>
@@ -246,7 +246,7 @@
                         </span>
                     </div>
                     <div class="trainer-button">
-                        <input type="button" value="More About Him" id="read-more">
+                        <input type="button" value="Read More" id="read-more">
                     </div>
                 </div>
             </div>
@@ -270,7 +270,7 @@
                             coach in the history of the four major North American sports leagues.</span>
                     </div>
                     <div class="trainer-button">
-                        <input type="button" value="More About Him" id="read-more">
+                        <input type="button" value="Read More" id="read-more">
                     </div>
                 </div>
             </div>
@@ -294,7 +294,7 @@
                             served as an assistant coach for Huasiong College of Iloilo, his former school.</span>
                     </div>
                     <div class="trainer-button">
-                        <input type="button" value="More About Him" id="read-more">
+                        <input type="button" value="Read More" id="read-more">
                     </div>
                 </div>
             </div>
@@ -485,7 +485,10 @@
                             <label for="recipient-age" class="col-form-label pe-1">Age:</label>
                             <input type="text" class="form-control" id="recipient-age">
                             <label for="recipient-sex" class="col-form-label px-1">Sex:</label>
-                            <input type="text" class="form-control" id="recipient-sex">
+                            <input type="radio" name="sex" id="male" value="male" class="me-1">
+                            <label for="male" class="mt-2 pe-2">Male</label>
+                            <input type="radio" name="sex" id="female" value="female" class="me-1">
+                            <label for="female" class="mt-2">Female</label>
                         </div>
                         <div class="mb-3">
                             <label for="recipient-email" class="col-form-label">E-mail Address:</label>
