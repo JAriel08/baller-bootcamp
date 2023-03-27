@@ -1,0 +1,2566 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Roboto:wght@300&display=swap');@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    background-color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    position: fixed;
+    z-index: 1;
+}
+.logo i {
+    color: orange;
+    font-size: 30px;
+    
+    
+}
+.logo span {
+    font-family: 'Anton', sans-serif; 
+    letter-spacing: 1px;
+    padding-left: 2px;
+    padding-top: 2px;
+}
+.menu {
+    display: flex;
+    text-decoration: none;
+}
+.menu li {
+    
+    padding-left: 30px;
+    text-decoration: none;
+    
+}
+.menu li a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    transition: 0.15s ease-in-out;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding-top: 5px;
+    
+}
+.menu li a:hover {
+    background-color: rgb(244, 162, 19);
+    padding: 5px;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+#sign-up {
+    background-color: rgb(244, 162, 19);
+    padding: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+#sign-up:hover {
+    background-color: rgb(248, 220, 169);
+}
+.menu li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.15s ease-in-out;
+}
+.menu li a:hover:after {width: 100%;}
+.open-menu, .close-menu {
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5rem;
+    display: none;
+}
+.open-menu {
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+.close-menu {
+    top: 20px;
+    right: 20px;
+}
+#check {
+    display: none;
+}
+
+@media (max-width: 828px) {
+    .nav-bar {
+        width: 100%;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        z-index: 100;
+        background-color: black;
+        transition: all 0.2 ease-in-out;
+    }
+    .menu li {
+        margin-top: 40px;
+    }
+    .menu li a {
+        padding: 10px;
+    }
+    .open-menu, .close-menu {
+        display: block;
+    }
+    #check:checked ~ .menu {
+        right: 0;
+    }
+}
+
+
+
+
+/* BACKGROUND IMAGE */
+.bg {
+    height: 100vh;
+    position: relative;
+}
+.bg::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: white;
+    opacity: .8;
+    background-image: url(images/background.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.text {
+    display: flex;
+    flex-direction: column;
+    ;
+    justify-content: center;
+    align-self: center;
+    color: white;
+    width: 800px;
+    padding-bottom: 50px;
+}
+.quote, .name {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+.quote {
+    font-weight: 500;
+    font-size: 70px;
+    color: rgb(244, 162, 19);
+    font-family: 'Anton', sans-serif;
+    width: 800px;
+}
+.saying {
+    padding-bottom: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.name {
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+}
+#join-our-team {
+    padding: 10px;
+    background-color: orange;
+    border-radius: 10px;
+    font-family: 'Anton', sans-serif;
+    color: whitesmoke;
+    font-size: 25px;
+}
+#join-our-team:hover {
+    background-color: rgb(248, 220, 169);
+    transition: .5s;
+}
+
+
+/* ABOUT */
+.about {
+    background-color: rgb(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100vh;
+}
+.about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+.about-title span {
+    color: orange;
+    font-weight: 700;
+    font-size: 45px;
+    padding-top: 20px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+.about-content {
+    border: 1px rgb(250, 207, 128) solid;
+    box-shadow: 10px 10px;
+    width: 1250px;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+    top: -25px;
+    display: flex;
+    border-radius: 10px;
+}
+.images {
+    width: 500px;
+    height: 349px;
+    background-image: url(images/bootcamp.jpg);
+    background-size: cover;
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.description {
+    width: 750px;
+    height: 300px;
+    padding: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.description p {
+    color: white;
+    text-align: justify;
+    font-size: 18px;
+}
+.features {
+    text-align: center;
+}
+.card-feature {
+    width: 1275px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+.first-feature {
+    border-width: 2px;
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 190px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    border-color: rgb(250, 207, 128);
+    box-shadow: 10px 10px;
+}
+.first-feature i {
+    color: orange;
+    padding-bottom: 10px;
+    font-size: 25px;
+}
+.category {
+    color: orange;
+}
+.category-about {
+    color: white;
+    padding-bottom: 10px;
+}
+
+/* PLANS */
+.plans {
+    height: 100vh;
+    background-color: rgb(0, 0, 0, 0.8);
+}
+.card-title {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-title span {
+    color: orange;
+    font-weight: 700;
+    font-size: 45px;
+    padding-top: 20px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+.all-card-plan {
+    height: 550px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.card-plan {
+    border: 2px rgb(250, 207, 128) solid;
+    border-radius: 15px;
+    width: 300px;
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+}
+.card-plan-title {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+}
+.card-plan-title span {
+    color: rgb(246, 204, 125);
+    font-size: 30px;
+    font-weight: 700;
+}
+.prof-card-plan-title {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Anton', sans-serif;
+    background-color: rgb(231, 193, 121);
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+.prof-card-plan-title span {
+    font-size: 30px;
+    font-weight: 700;
+    color: black;
+}
+.card-plan-description {
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+}
+.card-plan-description span {
+    color: whitesmoke;
+    padding: 10px;
+}
+.italic {
+    font-style: italic;
+}
+.card-plan-price {
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.exact-price {
+    font-weight: 700;
+    color: rgba(244, 162, 19, 0.799);
+    font-size: 30px;
+}
+.per-month {
+    color: white;
+}
+.card-plan-features span {
+    padding-left: 10px;
+    font-weight: 500;
+    color: whitesmoke;
+}
+.features-list {
+    height: 260px;
+}
+.features-list li {
+    color: white;
+}
+.card-plan-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 55px;
+}
+.overview-card-button a {
+    text-decoration: none;
+    color: black;
+}
+#overview-button {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: orange;
+    border-radius: 10px;
+}
+#overview-button:hover {
+    background-color: rgb(248, 220, 169);
+    transition: .5s;
+    color: black;
+}
+#card-sign-up {
+    padding: 5px;
+    margin-bottom: 5px;
+    background-color: orange;
+    border-radius: 10px;
+}
+#card-sign-up:hover {
+    background-color: rgb(248, 220, 169);
+    transition: .5s;
+}
+
+/* TRAINERS */
+.trainer {
+    background-color: rgb(0, 0, 0, 0.8);
+    height: 100vh;
+}
+
+.trainers-title {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trainers-title span {
+    color: orange;
+    font-weight: 700;
+    font-size: 45px;
+    padding-top: 20px;
+    letter-spacing: 2px;
+    font-family: 'Anton', sans-serif;
+}
+
+.trainer-all-cards {
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+}
+
+.trainer-card {
+    border: 2px rgb(248, 220, 169) solid;
+    box-shadow: -10px -10px;
+    display: flex;
+    flex-direction: column;
+    height: 420px;
+    width: 350px;
+    border-radius: 15px;
+    gap: 10px;
+}
+
+.trainer-design-top {
+    width: 60%;
+    height: 3%;
+    background: rgb(231, 193, 121);
+    margin: 0 auto;
+    border-radius: 0px 0px 15px 15px;
+}
+
+.img {
+    width: 200px;
+    height: 150px;
+    background-image: url(images/coach-mavs.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.second-img {
+    width: 200px;
+    height: 150px;
+    background-image: url(images/eric-spoelstra.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.third-img {
+    width: 200px;
+    height: 150px;
+    background-image: url(images/nicolo.jpg);
+    background-size: cover;
+    border-radius: 15px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.trainer-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px 5px 0 5px;
+    height: 245px;
+}
+.trainer-name {
+    height: 25px;
+}
+.trainer-name span {
+    color: rgba(255, 166, 0, 0.658);
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 1px;
+}
+.trainer-job {
+    height: 25px;
+}
+.trainer-experience {
+    text-align: justify;
+    padding: 0 10px;
+    height: 163px;
+}
+.trainer-button {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    height: 50px;
+}
+#read-more {
+    padding: 5px;
+    background-color: orange;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+#read-more:hover {
+    background-color: rgb(248, 220, 169);
+    transition: .5s;
+}
+
+.trainer-schedule {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.trainer-schedule span {
+    color: orange;
+    font-weight: 700;
+    font-size: 30px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+table {
+    width: 800px;
+    margin: 0 auto;
+    color: white;
+    border-radius: 100px;
+}
+thead {
+    text-align: center;
+    color: rgb(231, 193, 121);
+    font-family: 'Anton', sans-serif;
+}
+td {
+    text-align: center;
+}
+
+/* REVIEWS */
+.review {
+    background-color: rgb(0, 0, 0, 0.8);
+    height: 100vh;
+}
+
+.review-title {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+}
+
+.review-title span {
+    color: orange;
+    font-weight: 700;
+    font-size: 40px;
+    font-family: 'Anton', sans-serif;
+    letter-spacing: 2px;
+}
+.all-of-cards {
+    margin: 50px 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+.review-card {
+    border: 5px rgb(250, 207, 128) solid;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 350px;
+    height: 450px;
+}
+.review-paragraph {
+    height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.review-paragraph span {
+    text-align: justify;
+    color: whitesmoke;
+}
+.review-all-bot {
+    display: flex;
+}
+.review-image {
+    width: 75px;
+    height: 75px;
+    background-image: url(images/curry.jpg);
+    background-size: cover;
+    border: 2px orange solid;
+    margin: 0 10px 10px 10px;
+}
+.second-review-image {
+    width: 75px;
+    height: 75px;
+    background-image: url(images/paige.png);
+    background-size: cover;
+    border: 2px orange solid;
+    margin: 0 10px 10px 10px;
+}
+.third-review-image {
+    width: 75px;
+    height: 75px;
+    background-image: url(images/kai.jpg);
+    background-size: cover;
+    border: 2px orange solid;
+    margin: 0 10px 10px 10px;
+}
+.review-bottom {
+    display: flex;
+    flex-direction: column;
+}
+.review-name {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.review-name span {
+    color: rgb(248, 220, 169);
+}
+.review-graduate {
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review-graduate span {
+    font-style: italic;
+    font-size: 12px;
+    color: whitesmoke;
+}
+
+/* FOOTER */
+footer {
+    background-color: black;
+    color: whitesmoke;
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.all-footer-content {
+    width: 1500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 280px;
+}
+
+.contact-us, .quick-links, .company, .socials {
+    width: 275px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-title, .quick-title, .company-title, .follow-title {
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 20px;
+    color: rgb(248, 220, 169);
+}
+
+.contact-location {
+    padding-bottom: 20px;
+}
+
+.company a, .quick-links a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.company a:hover, .quick-links a:hover, .social-links i:hover {
+    color: rgb(250, 207, 128);
+    transition: 0.5 ease;
+}
+
+.social-links i {
+    font-size: 40px;
+    padding-right: 10px;
+    text-decoration: none;
+    color: whitesmoke;
+
+}
+
+.all-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+/* MODAL */
+.modal-header {
+    background-color: rgb(246, 204, 125);
+}
+.modal-header h1 {
+    font-weight: 500;
+    font-family: 'Anton', sans-serif;
+}
+#send-button {
+    background-color: rgb(244, 162, 19);
+}
+
+@media (max-width: 1496px) and (min-width: 1275px) {
+    nav {
+        position: absolute;
+    }
+    .about, .plans, .trainer, .review {
+        height: 800px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-content {
+        width: 1200px;
+        height: 450px;
+        top: 0;
+        margin-top: 20px;
+    }
+    .images {
+        height: 100%;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 1200px;
+    }
+    .first-feature {
+        width: 280px;
+        height: 200px;
+    }
+
+    /* TRAINERS */
+    .trainer-card {
+        width: 300px;
+        height: 400px;
+    }
+    .box-trainer-schedule {
+        margin-top: 25px;
+    }
+
+    /* FOOTER */
+    .all-footer-content {
+    width: 1200px;
+    }
+}
+@media (max-width: 1275px) and (min-width: 1050px) {
+    .about, .plans, .trainer, .review {
+        height: 800px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-content {
+        width: 1000px;
+        height: 450px;
+        top: 0;
+        margin-top: 20px;
+    }
+    .images {
+        height: 100%;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 1000px;
+    }
+    .first-feature {
+        width: 240px;
+        height: 215px;
+    }
+
+    /* TRAINERS */
+    .trainer-card {
+        width: 300px;
+        height: 400px;
+    }
+    .box-trainer-schedule {
+        margin-top: 25px;
+    }
+
+    /* FOOTER */
+    .all-footer-content {
+        width: 800px;
+    }
+} 
+
+@media (max-width: 1050px) and (min-width: 950px) {
+    .about, .plans, .trainer, .review {
+        height: 850px;
+        width: 100%;
+    }
+    .about {
+        height: 950px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-content {
+        width: 900px;
+        height: 475px;
+        top: 0;
+        margin-top: 20px;
+    }
+    .images {
+        height: 100%;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 900px;
+    }
+    .first-feature {
+        width: 215px;
+        height: 230px;
+    }
+    
+    /* TRAINERS */
+    .trainer-card {
+        width: 300px;
+        height: 400px;
+    }
+    .box-trainer-schedule {
+        margin-top: 30px;
+    }
+
+    /* REVIEWS */
+    .review-card {
+        width: 300px;
+    }
+
+    /* FOOTER */
+    .all-footer-content {
+        width: 900px;
+    }
+}
+
+@media (max-width: 950px) and (min-width : 800px) {
+    nav {
+        font-size: 14px;
+    }
+    .nav-bar i {
+        padding-left: 5px;
+    }
+    .about, .plans, .trainer, .review {
+        height: 850px;
+        width: 100%;
+    }
+    .about {
+        height: 1175px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-content {
+        width: 750px;
+        height: 600px;
+        top: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 100%;
+        height: 100%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .description p {
+        font-size: 14px;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 760px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .first-feature {
+        width: 280px;
+        height: 190px;
+        margin: 10px 100px 10px 0;
+    }
+    .category-about {
+        font-size: 16px;
+    }
+
+    /* PLANS */
+    .plans {
+        height: 1100px;
+    }
+    .all-card-plan {
+        height: 950px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-plan {
+        margin: 0 40px;
+        width: 300px;
+        height: 450px;
+        font-size: small;
+    }
+
+    /* TRAINERS */
+    .trainer {
+        height: 1150px;
+    }
+    .trainer-all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .trainer-card {
+        font-size: small;
+        width: 300px;
+        height: 350px;
+        margin: 10px 40px;
+    }
+    .trainer-description {
+        height: 190px;
+    }
+    .box-trainer-schedule {
+        margin-top: 30px;
+    }
+
+    /* REVIEWS */
+    .review {
+        height: 1050px;
+    }
+    .all-of-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .review-card {
+        width: 350px;
+        height: 400px;
+        margin: 10px 20px;
+    }
+
+    /* FOOTER */
+    .all-footer-content {
+        width: 700px;
+        font-size: small;
+    }
+} 
+
+@media (max-width: 800px) and (min-width: 750px) {
+    nav {
+        position: absolute;
+        font-size: 10px;
+        /* width: 700px; */
+        
+    }
+    .nav-bar i {
+        padding-left: 5px;
+    }
+    .text {
+        width: 750px;
+    }
+    .quote {
+        width: 100%;
+    }
+    .about, .plans, .trainer, .review {
+        height: 1150px;
+        width: 100%;
+    }
+    .about {
+        height: 1175px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-content {
+        width: 650px;
+        height: 600px;
+        top: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 100%;
+        height: 90%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .description {
+        width: 650px;
+    }
+    .description p {
+        font-size: 14px;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 760px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .first-feature {
+        width: 280px;
+        height: 190px;
+        margin: 10px auto;
+    }
+    .category-about {
+        font-size: 16px;
+    }
+
+    /* PLANS */
+    .plans {
+        height: 1100px;
+    }
+    .all-card-plan {
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-plan {
+        margin: 0 20px 0 20px;
+        margin: 0 auto;
+        width: 300px;
+        height: 450px;
+        font-size: small;
+    }
+
+    /* TRAINERS */
+    .trainer {
+        height: 1150px;
+    }
+    .trainer-all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .trainer-card {
+        font-size: small;
+        width: 290px;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .trainer-description {
+        height: 190px;
+    }
+    .box-trainer-schedule {
+        font-size: small;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    table {
+        margin-top: 10px;
+        width: 600px
+    };
+
+    /* REVIEWS */
+    .review {
+        height: 1050px;
+    }
+    .all-of-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .review-card {
+        width: 330px;
+        height: 440px;
+        margin: 10px 20px;
+    }
+
+    /* FOOTER */
+    .all-footer-content {
+        width: 700px;
+        font-size: small;
+    }
+}
+@media (max-width: 750px) and (min-width: 700px) {
+    nav {
+        position: absolute;
+        font-size: 10px;
+        
+    }
+    .nav-bar i {
+        padding-left: 5px;
+    }
+    .text {
+        width: 700px;
+    }
+    .quote {
+        width: 100%;
+    }
+    .about, .plans, .trainer, .review {
+        height: 1150px;
+        width: 100%;
+    }
+    .about {
+        height: 1175px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-content {
+        width: 650px;
+        height: 600px;
+        top: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 100%;
+        height: 90%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .description {
+        width: 650px;
+    }
+    .description p {
+        font-size: 14px;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 700px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .first-feature {
+        width: 280px;
+        height: 190px;
+        margin: 10px auto;
+    }
+    .category-about {
+        font-size: 16px;
+    }
+
+    /* PLANS */
+    .plans {
+        height: 1100px;
+    }
+    .all-card-plan {
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-plan {
+        margin: 0 20px 0 20px;
+        margin: 0 auto;
+        width: 300px;
+        height: 450px;
+        font-size: small;
+    }
+
+    /* TRAINERS */
+    .trainer {
+        height: 1150px;
+    }
+    .trainer-all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .trainer-card {
+        font-size: small;
+        width: 290px;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .trainer-description {
+        height: 190px;
+    }
+    .box-trainer-schedule {
+        font-size: small;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    table {
+        margin-top: 10px;
+        width: 600px
+    };
+
+    /* REVIEWS */
+    .review {
+        height: 1050px;
+    }
+    .all-of-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .review-card {
+        width: 320px;
+        height: 440px;
+        margin: 10px 10px;
+    }
+
+    /* FOOTER */
+    .all-footer-content {
+        width: 700px;
+        font-size: small;
+    }
+}
+@media (max-width: 700px) and (min-width: 650px) {
+    nav {
+        position: absolute;
+        font-size: 10px;
+        width: 650px;
+        
+    }
+    .nav-bar i {
+        padding-left: 5px;
+    }
+    .text {
+        width: 650px;
+    }
+    .quote {
+        width: 100%;
+    }
+    .about, .plans, .trainer, .review {
+        height: 1150px;
+        width: 100%;
+    }
+    .about {
+        height: 1175px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-content {
+        width: 620px;
+        height: 600px;
+        top: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 100%;
+        height: 90%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .description {
+        width: 620px;
+    }
+    .description p {
+        font-size: 14px;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 620px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .first-feature {
+        width: 280px;
+        height: 190px;
+        margin: 10px auto;
+    }
+    .category-about {
+        font-size: 16px;
+    }
+
+    /* PLANS */
+    .plans {
+        height: 1100px;
+    }
+    .all-card-plan {
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-plan {
+        margin: 0 20px 0 20px;
+        margin: 0 auto;
+        width: 300px;
+        height: 450px;
+        font-size: small;
+    }
+
+    /* TRAINERS */
+    .trainer {
+        height: 1150px;
+    }
+    .trainer-all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .trainer-card {
+        font-size: small;
+        width: 250px;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .trainer-description {
+        height: 190px;
+    }
+    .box-trainer-schedule {
+        font-size: small;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    table {
+        margin-top: 10px;
+        width: 600px
+    };
+
+    /* REVIEWS */
+    .review {
+        height: 1550px;
+    }
+    #reviews {
+        height: 1200px;
+    }
+    .all-of-cards {
+        /* height: 1650px; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .review-card {
+        width: 300px;
+        height: 440px;
+        margin: 10px 10px;
+    }
+
+    /* FOOTER */
+    .all-footer-content {
+        width: 640px;
+        font-size: small;
+    }
+}
+
+@media (max-width: 650px) and (min-width: 600px) {
+    nav {
+        position: absolute;
+        font-size: 10px;
+        
+    }
+    .nav-bar i {
+        padding-left: 5px;
+    }
+    /* BACKGROUND */
+    .container {
+        width: 500px;
+    }
+    .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .quote {
+        font-size: 45px;
+    }
+    .text {
+        width: 600px;
+    }
+    .quote {
+        width: 100%;
+    }
+    .name {
+        font-size: 25px;
+    }
+
+
+    .about, .plans, .trainer, .review {
+        height: 1150px;
+    }
+    .about {
+        height: 1175px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-content {
+        width: 550px;
+        height: 600px;
+        top: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 100%;
+        height: 90%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .description {
+        width: 550px;
+    }
+    .description p {
+        font-size: 14px;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 550px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .first-feature {
+        width: 260px;
+        height: 190px;
+        margin: 10px auto;
+    }
+    .category-about {
+        font-size: 16px;
+    }
+
+    /* PLANS */
+    .plans {
+        height: 1150px;
+    }
+    .all-card-plan {
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-plan {
+        /* margin: 0 20px 0 20px; */
+        margin: 0 auto;
+        width: 265px;
+        height: 470px;
+        font-size: small;
+    }
+
+    /* TRAINERS */
+    .trainer {
+        height: 1150px;
+    }
+    .trainer-all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .trainer-card {
+        font-size: small;
+        width: 270px;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .trainer-description {
+        height: 190px;
+    }
+    .box-trainer-schedule {
+        font-size: small;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    table {
+        margin-top: 10px;
+        width: 600px
+    };
+
+    /* REVIEWS */
+    .review {
+        height: 1150px;
+    }
+    .all-of-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .review-card {
+        width: 270px;
+        height: 450px;
+        margin: 10px auto;
+    }
+    .review-paragraph span {
+        font-size: 15px;
+    }
+    /* FOOTER */
+    .all-footer-content {
+        width: 500px;
+        font-size: x-small;
+    }
+    .social-links i {
+        font-size: 25px;
+    }
+}
+@media (max-width: 600px) and (min-width: 550px) {
+    nav {
+        position: absolute;
+        font-size: 10px;
+        width: 550px;
+        
+    }
+    .nav-bar i {
+        padding-left: 5px;
+    }
+    /* BACKGROUND */
+    .container {
+        width: 500px;
+    }
+    .text {
+        display: flex;
+        
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        width: 500px;
+        margin: 0 auto;
+    }
+    .quote {
+        font-size: 30px;
+        text-align:center;
+        justify-content: flex-start;
+    }
+    .text {
+        width: 550px;
+    }
+    .quote {
+        width: 100%;
+    }
+    .name {
+        font-size: 20px;
+    }
+
+    .about, .plans, .trainer, .review {
+        height: 1150px;
+        width: 100%;
+    }
+    .about {
+        height: 1175px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-title span, .card-title span, .trainers-title span, .review-title span {
+        font-size: 35px;
+    }
+    .about-content {
+        width: 500px;
+        height: 600px;
+        top: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 100%;
+        height: 90%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .description {
+        width: 500px;
+        height: 300px;
+    }
+    .description p {
+        font-size: 13px;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 500px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .first-feature {
+        width: 240px;
+        height: 205px;
+        margin: 10px auto;
+    }
+    .category-about {
+        font-size: 16px;
+    }
+
+    /* PLANS */
+    .plans {
+        height: 1550px;
+    }
+    .all-card-plan {
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-plan {
+        margin: 0 20px 0 20px;
+        margin: 10px auto;
+        width: 340px;
+        height: 450px;
+        font-size: small;
+    }
+
+    /* TRAINERS */
+    .trainer {
+        height: 1150px;
+    }
+    .trainer-all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .trainer-card {
+        font-size: small;
+        width: 270px;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .trainer-description {
+        height: 190px;
+    }
+    .box-trainer-schedule {
+        font-size: small;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    table {
+        margin-top: 10px;
+        width: 500px;
+    }
+
+    /* REVIEWS */
+    .review {
+        height: 1330px;
+    }
+    .all-of-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .review-card {
+        width: 400px;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .review-paragraph span {
+        font-size: 15px;
+    }
+    .review-all-bot {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .review-image {
+        margin-left: 0;
+    }
+    /* FOOTER */
+    .all-footer-content {
+        width: 500px;
+        font-size: x-small;
+    }
+    .social-links i {
+        font-size: 25px;
+    }
+}
+@media (max-width: 550px) and (min-width: 540px) {
+    nav {
+        position: relative;
+        font-size: 10px;
+        flex-direction: column;
+        height: 150px;
+        width: 100%;
+    }
+    .nav-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+    }
+    .nav-bar i {
+        padding-left: 5px;
+    }
+    .nav-bar-list {
+        width: 100%;
+        height: 550px;
+        border: 1px white solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .nav-bar-list li {
+        justify-self: center;
+        align-self: center;
+        margin: 0 auto;
+    }
+    .nav-bar-list li a{
+        text-align: center;
+        justify-self: center;
+    }
+
+    /* BACKGROUND */
+    .container {
+        width: 600px;
+    }
+    .quote {
+        height: 100px;
+        font-size: 35px;
+    }
+    .text {
+        width: 390px;
+    }
+    .quote {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .name {
+        font-size: 20px;
+    }
+    .about, .plans, .trainer, .review {
+        height: 1150px;
+        width: 100%;
+    }
+    .about {
+        height: 1450px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-title span, .card-title span, .trainers-title span, .review-title span {
+        font-size: 20px;
+    }
+    .about-content {
+        width: 370px;
+        height: 600px;
+        top: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 100%;
+        height: 90%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .description {
+        width: 370px;
+        height: 368px;
+    }
+    .description p {
+        font-size: 13px;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 370px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .first-feature {
+        width: 360px;
+        height: 170px;
+        margin: 10px auto;
+    }
+    .category-about {
+        font-size: 16px;
+    }
+
+    /* PLANS */
+    .plans {
+        height: 1500px;
+    }
+    .all-card-plan {
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-plan {
+        margin: 0 20px 0 20px;
+        margin: 10px auto;
+        width: 340px;
+        height: 450px;
+        font-size: small;
+    }
+    /* TRAINERS */
+    .trainer {
+        height: 1450px;
+    }
+    .trainer-all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .trainer-card {
+        font-size: small;
+        width: 280px;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .trainer-description {
+        height: 190px;
+    }
+    .box-trainer-schedule {
+        font-size: x-small;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .trainer-schedule span {
+        font-size: 17px;
+    }
+    table {
+        width: 380px;
+    }
+
+    /* REVIEWS */
+    .review {
+        height: 1330px;
+    }
+    .all-of-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .review-card {
+        width: 350px;
+        height: 330px;
+        margin: 10px auto;
+    }
+    .review-paragraph span {
+        font-size: 13px;
+    }
+    .review-all-bot {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .review-image {
+        margin-left: 5px;
+    }
+    /* FOOTER */
+    footer {
+        height: 500px;
+    }
+    .all-footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 390px;
+        font-size: x-small;
+    }
+    .quick-titles {
+        padding-bottom: 0;
+    }
+    .social-links i {
+        font-size: 25px;
+    }
+    .all-right {
+        position: relative;
+        top: 90px;
+    }
+}
+@media (max-width: 540px) and (min-width: 390px) {
+    nav {
+        position: relative;
+        font-size: 10px;
+        flex-direction: column;
+        height: 150px;
+        width: 100%;
+    }
+    .nav-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 75px;
+    }
+    .nav-bar i {
+        padding-left: 5px;
+    }
+    .nav-bar-list {
+        width: 100%;
+        height: 550px;
+        border: 1px white solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .nav-bar-list li {
+        justify-self: center;
+        align-self: center;
+        margin: 0 auto;
+    }
+    .nav-bar-list li a{
+        text-align: center;
+        justify-self: center;
+    }
+
+    /* BACKGROUND */
+    .container {
+        width: 600px;
+    }
+    .quote {
+        height: 100px;
+        font-size: 35px;
+    }
+    .text {
+        width: 390px;
+    }
+    .quote {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .name {
+        font-size: 20px;
+    }
+    .about, .plans, .trainer, .review {
+        height: 1150px;
+        width: 100%;
+    }
+    .about {
+        height: 1450px;
+    }
+    .about-title {
+        height: 70px;
+    }
+    .about-title span, .card-title span, .trainers-title span, .review-title span {
+        font-size: 20px;
+    }
+    .about-content {
+        width: 370px;
+        height: 600px;
+        top: 0;
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    .images {
+        width: 100%;
+        height: 90%;
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 0;
+    }
+    .description {
+        width: 370px;
+        height: 368px;
+    }
+    .description p {
+        font-size: 13px;
+    }
+    .card-feature {
+        margin-top: 30px;
+        width: 370px;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        
+    }
+    .first-feature {
+        width: 360px;
+        height: 170px;
+        margin: 10px auto;
+    }
+    .category-about {
+        font-size: 16px;
+    }
+
+    /* PLANS */
+    .plans {
+        height: 1500px;
+    }
+    .all-card-plan {
+        height: 1000px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .card-plan {
+        margin: 0 20px 0 20px;
+        margin: 10px auto;
+        width: 340px;
+        height: 450px;
+        font-size: small;
+    }
+    /* TRAINERS */
+    .trainer {
+        height: 1450px;
+    }
+    .trainer-all-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .trainer-card {
+        font-size: small;
+        width: 270px;
+        height: 350px;
+        margin: 10px auto;
+    }
+    .trainer-description {
+        height: 190px;
+    }
+    .box-trainer-schedule {
+        font-size: x-small;
+        height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .trainer-schedule span {
+        font-size: 17px;
+    }
+    table {
+        width: 380px;
+    }
+
+    /* REVIEWS */
+    .review {
+        height: 1330px;
+    }
+    .all-of-cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+    .review-card {
+        width: 350px;
+        height: 330px;
+        margin: 10px auto;
+    }
+    .review-paragraph span {
+        font-size: 13px;
+    }
+    .review-all-bot {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .review-image {
+        margin-left: 5px;
+    }
+    /* FOOTER */
+    footer {
+        height: 500px;
+    }
+    .all-footer-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 390px;
+        font-size: x-small;
+    }
+    .quick-titles {
+        padding-bottom: 0;
+    }
+    .social-links i {
+        font-size: 25px;
+    }
+    .all-right {
+        position: relative;
+        top: 90px;
+    }
+}
+
+
+/* DRILLS PROFESSIONAL*/
+.drill-professional {
+    width: 100%;
+    height: 1600px;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+.drill-box {
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+.drill-box-title {
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px;
+    flex-wrap: flex;
+}
+.drill-box-title span {
+    color: rgb(246, 204, 125);
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.drill-box-title .drill-plan {
+    font-size: 30px;
+}
+.specification {
+    width: 700px;
+    height: 100%;
+    color: whitesmoke;
+}
+.all-specification-drill {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+.specification-drill-title {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 150px;
+}
+.specification-drill-title span {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(244, 162, 19, 0.973);
+}
+.specification-drill-about {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+/* DRILLS PLUS */
+.drill-plus {
+    width: 100%;
+    height: 1100px;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+.drill-box {
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+.drill-box-title {
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px;
+    flex-wrap: flex;
+}
+.drill-box-title span {
+    color: rgb(246, 204, 125);
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.drill-box-title .drill-plan {
+    font-size: 30px;
+}
+.specification {
+    width: 700px;
+    height: 100%;
+    color: whitesmoke;
+}
+.all-specification-drill {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+.specification-drill-title {
+    display: flex;
+    justify-content: center;
+    width: 400px;
+    height: 150px;
+}
+.specification-drill-title span {
+    font-size: 45px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(244, 162, 19, 0.973);
+}
+.specification-drill-about {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+/* DRILLS LITE */
+.drill-lite {
+    width: 100%;
+    height: 900px;
+    background-color: rgb(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+.drill-box {
+    width: 1000px;
+    height: 800px;
+    margin: 0 auto;
+    display: flex;
+}
+.drill-box-title {
+    width: 300px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 20px;
+    flex-wrap: flex;
+}
+.drill-box-title span {
+    color: rgb(246, 204, 125);
+    font-size: 100px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    font-family: 'Anton', sans-serif;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.drill-box-title .drill-plan {
+    font-size: 30px;
+}
+.specification {
+    width: 700px;
+    height: 100%;
+    color: whitesmoke;
+}
+.all-specification-drill {
+    display: flex;
+    justify-content: space-around;
+    height: 150px;
+}
+.specification-drill-title {
+    display: flex;
+    justify-content: left;
+    width: 400px;
+    height: 150px;
+}
+.specification-drill-title span {
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: rgba(244, 162, 19, 0.973);
+}
+.specification-drill-about {
+    width: 300px;
+    display: flex;
+    align-items: center;
+}
+
+/* MEDIA for DRILLS */
+
+/* LITE */
+@media (max-width: 1000px) and (min-width: 900px) {
+    .drill-box {
+        display: flex;
+        width: 900px;
+    }
+    .drill-box-title {
+        width: 250px;
+    }
+    .drill-box-title span {
+        font-size: 80px;
+    }
+    .specification {
+        width: 650px;
+    }
+}
+
+@media (max-width: 900px) and (min-width: 800px) {
+    .drill-box {
+        display: flex;
+        width: 800px;
+    }
+
+    .drill-box-title {
+        width: 200px;
+    }
+
+    .drill-box-title span {
+        font-size: 65px;
+    }
+
+    .specification {
+        width: 600px;
+    }
+
+    .specification-drill-title span {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 800px) and (min-width: 700px) {
+    .drill-lite {
+        height: 1000px;
+    }
+    .drill-box {
+        display: flex;
+        flex-direction: column;
+        width: 700px;
+        justify-content: center;
+        align-items: center;
+    }
+    .drill-box-title {
+        display: block;
+        align-items: center;
+        width: 265px;
+    }
+    .drill-box-title span {
+        font-size: 55px;
+    }
+    .specification {
+        width: 550px;
+    }
+    .specification-drill-title span {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 600px) {
+    .drill-box {
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+        justify-content: center;
+        align-items: center;
+    }
+    .drill-box-title {
+        display: block;
+        align-items: center;
+        width: 270px;
+    }
+    .drill-box-title span {
+        font-size: 55px;
+    }
+    .specification {
+        width: 550px;
+    }
+    .specification-drill-title span {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 600px) and (min-width: 500px) {
+    .drill-box {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .drill-box-title {
+        display: block;
+        align-items: center;
+        width: 270px;
+    }
+
+    .drill-box-title span {
+        font-size: 55px;
+    }
+
+    .specification {
+        width: 500px;
+    }
+
+    .specification-drill-title span {
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    .specification-drill-about {
+        width: 290px;
+    }
+    .specification-drill-about span {
+        font-size: 14px;
+    }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+    .drill-box {
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .drill-box-title {
+        display: block;
+        align-items: center;
+        width: 270px;
+    }
+
+    .drill-box-title span {
+        font-size: 55px;
+    }
+
+    .specification {
+        width: 500px;
+    }
+
+    .specification-drill-title span {
+        font-size: 25px;
+        padding-left: 10px;
+    }
+    .specification-drill-about {
+        width: 290px;
+    }
+    .specification-drill-about span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 500px) and (min-width: 390px) {
+    .drill-box {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .drill-box-title {
+        display: block;
+        align-items: center;
+        width: 220px;
+    }
+
+    .drill-box-title span {
+        font-size: 40px;
+    }
+    .drill-box-title .drill-plan {
+        font-size: 25px;
+    }
+    .specification {
+        width: 390px;
+    }
+
+    .specification-drill-title span {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+
+    .specification-drill-about {
+        width: 290px;
+        padding-right: 10px;
+    }
+
+    .specification-drill-about span {
+        font-size: 12px;
+    }
+}
+
+/* PLUS */
+@media (max-width: 800px) and (min-width: 700px) {
+    .drill-box-title {
+        width: 280px;
+    }
+    .drill-plus {
+        height: 1200px;
+    }
+}
+
+@media (max-width: 700px) and (min-width: 600px) {
+    .drill-plus {
+        height: 1200px;
+    }
+}
+@media (max-width: 700px) and (min-width: 600px) {
+    .drill-box-title {
+        width: 290px;
+    }
+}
+@media (max-width: 600px) and (min-width: 500px) {
+    .drill-plus {
+        height: 1200px;
+    }
+    .drill-box-title {
+        width: 300px;
+    }
+}
+@media (max-width: 500px) and (min-width: 390px) {
+    .drill-plus {
+        height: 1200px;
+    }
+    .drill-box-title {
+        width: 230px;
+    }
+}
+@media (max-width: 800px) {
+    .drill-box-title {
+        margin-top: 20px;
+    }
+    .drill-professional {
+        height: 1700px;
+    }
+}
+@media (max-width: 900px) {
+    .drill-box-title .drill-plan {
+        font-size: 25px;
+    }
+}
+
+
+.about-content, .first-feature, .card-plan, .trainer-card, .review-card {
+    background-color: black;
+}
