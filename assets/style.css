@@ -380,6 +380,7 @@
 }
 .features-list {
     height: 260px;
+    justify-content: flex-start;
 }
 .features-list li {
     color: white;
